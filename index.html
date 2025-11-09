@@ -1,102 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ru">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>ГлобалТранс — Личный кабинет</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ГлобалТранс — Личный кабинет</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+
+
 </head>
+
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <h1>ГлобалТранс</h1>
-      <div class="tag">Грузоперевозки</div>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand montserrat-alternates">
+                <h1>ГлобалТранс</h1>
+                <div class="tag">Грузоперевозки</div>
+            </div>
+            <nav class="top-nav">
+                <a href="#" id="open-login">Личный кабинет</a>
+                <a href="#news" class="active">Новости о компании</a>
+                <a href="#support">Тех. поддержка</a>
+            </nav>
+            <div class="contacts">
+                <div class="phone"><a href="tel:78004308756">+7 800 430 87 56</a></div>
+                <div class="email"><a href="mailto:globaltrans@mail.ru">globaltrans@mail.ru</a></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- <main class="container">
+      <section class="hero">
+        <div class="hero-inner">
+          <h2>Внутренний портал ГлобалТранс</h2>
+          <p>
+            Управление рейсами, водителями и транспортом — личный кабинет
+            компании.
+          </p>
+          <button id="open-login-cta">Войти в личный кабинет</button>
+        </div>
+      </section> -->
+
+    <section id="news" class="news-section">
+
+        <div class="news-grid">
+            <article class="card">
+                <div class="card-date">29.09.2025</div>
+                <img src="images/Груз.jpg" alt="truck" />
+                <h4>Ростов-на-Дону: Сокращённый режим работы 30 сентября</h4>
+                <p>
+                    Уважаемые водители! Во вторник отделение ГлобалТранс в
+                    Ростове-на-Дону будет работать по сокращённому графику.
+                </p>
+                <a class="read-more" href="#">Читать полностью</a>
+            </article>
+
+            <article class="card">
+                <div class="card-date">25.07.2025</div>
+
+
+
+                <img src="images/график.jpg" alt="clock" />
+                <h4>Ростов-на-Дону: новый режим работы с 1 августа</h4>
+                <p>
+                    С 1 августа изменится режим работы отделения в Ростове-на-Дону.
+                    Следите за обновлениями в личном кабинете.
+                </p>
+                <a class="read-more" href="#">Читать полностью</a>
+            </article>
+
+            <article class="card">
+                <div class="card-date">14.01.2025</div>
+                <img src="images/Награждение.jpg" alt="award" />
+                <h4>ГлобалТранс — лучшая грузовая компания 2024 года!</h4>
+                <p>
+                    По итогам 2024 года компания «ГлобалТранс» получила почётное
+                    звание лучшей в своей отрасли.
+                </p>
+                <a class="read-more" href="#">Читать полностью</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="support" class="support-section">
+        <h3 class="section-title">Техническая поддержка</h3>
+        <p class="section-title sub-section-title">
+            Для сотрудников: обращайтесь в техподдержку по почте или телефону,
+            указанным в шапке.
+        </p>
+    </section>
+
+    <!-- Login modal (simple, client-side only) -->
+    <div id="login-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-labelledby="login-title">
+            <button class="modal-close" id="close-login" aria-label="Закрыть">
+                ✕
+            </button>
+            <h2 id="login-title">Личный кабинет</h2>
+            <form id="login-form">
+                <label>Логин
+                    <input type="text" id="username" placeholder="Логин" required />
+                </label>
+
+                <label>Пароль
+                    <input type="password" id="password" placeholder="Пароль" required />
+                </label>
+
+                <div class="form-actions">
+                    <a href="#" onclick="alert('Увы :(')" class="forgot">Забыли пароль?</a>
+                    <button type="submit" class="btn-primary">Войти</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <nav class="top-nav">
-      <a href="#" id="open-login" class="active">Личный кабинет</a>
-      <a href="#news">Новости о компании</a>
-      <a href="#support">Тех. поддержка</a>
-    </nav>
-    <div class="contacts">
-      <div class="phone">+7 800 430 87 56</div>
-      <div class="email">globaltrans@mail.ru</div>
-    </div>
-  </div>
-</header>
 
-<main class="container">
-  <section class="hero">
-    <div class="hero-inner">
-      <h2>Внутренний портал ГлобалТранс</h2>
-      <p>Управление рейсами, водителями и транспортом — личный кабинет компании.</p>
-      <button id="open-login-cta">Войти в личный кабинет</button>
-    </div>
-  </section>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© ГлобалТранс, 2025 — Внутренний портал компании</p>
+        </div>
+    </footer>
 
-  <section id="news" class="news-section">
-    <h3 class="section-title">Новости о компании</h3>
-    <div class="news-grid">
-      <article class="card">
-        <div class="card-date">29.09.2025</div>
-        <img src="images/Груз.jpg" alt="truck" />
-        <h4>Ростов-на-Дону: Сокращённый режим работы 30 сентября</h4>
-        <p>Уважаемые водители! Во вторник отделение ГлобалТранс в Ростове-на-Дону будет работать по сокращённому графику.</p>
-        <a class="read-more" href="#">Читать полностью</a>
-      </article>
-
-      <article class="card">
-        <div class="card-date">25.07.2025</div>
-        <img src="images/график.jpg" alt="clock" />
-        <h4>Ростов-на-Дону: новый режим работы</h4>
-        <p>С 1 августа изменится режим работы отделения в Ростове-на-Дону. Следите за обновлениями в личном кабинете.</p>
-        <a class="read-more" href="#">Читать полностью</a>
-      </article>
-
-      <article class="card">
-        <div class="card-date">14.01.2025</div>
-        <img src="images/Награждение.jpg" alt="award" />
-        <h4>ГлобалТранс — лучшая грузовая компания 2024 года!</h4>
-        <p>По итогам 2024 года компания «ГлобалТранс» получила почётное звание лучшей в своей отрасли.</p>
-        <a class="read-more" href="#">Читать полностью</a>
-      </article>
-    </div>
-  </section>
-
-  <section id="support" class="support-section">
-    <h3 class="section-title">Техническая поддержка</h3>
-    <p>Для сотрудников: обращайтесь в техподдержку по почте или телефону, указанным в шапке.</p>
-  </section>
-</main>
-
-<!-- Login modal (simple, client-side only) -->
-<div id="login-modal" class="modal" aria-hidden="true">
-  <div class="modal-content" role="dialog" aria-labelledby="login-title">
-    <button class="modal-close" id="close-login" aria-label="Закрыть">✕</button>
-    <h2 id="login-title">Личный кабинет</h2>
-    <form id="login-form">
-      <label>Логин
-        <input type="text" id="username" placeholder="Логин" required>
-      </label>
-
-      <label>Пароль
-        <input type="password" id="password" placeholder="Пароль" required>
-      </label>
-
-      <div class="form-actions">
-        <a href="#" class="forgot">Забыли пароль?</a>
-        <button type="submit" class="btn-primary">Войти</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>© ГлобалТранс, 2025 — Внутренний портал компании</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
