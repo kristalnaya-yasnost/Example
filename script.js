@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         (el) =>
             el &&
             el.addEventListener("click", function (e) {
-                if (localStorage.getItem("login")) {
+                if (localStorage.getItem("login") && false) {
                     window.location.assign("profile.html");
                 } else {
                     e.preventDefault();
